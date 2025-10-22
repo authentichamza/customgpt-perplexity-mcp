@@ -1,12 +1,13 @@
 {
   "name": "perplexity-mcp-heroku",
   "private": true,
-  "engines": { "node": ">=18" },
+  "version": "0.0.1",
+  "engines": { "node": "24.x" },
   "scripts": {
-    "start": "node server.js"
+    "start": "mcp-proxy --port $PORT -- npx -y @perplexity-ai/mcp-server"
   },
   "dependencies": {
-    "@perplexity-ai/mcp-server": "^1.0.0",
-    "mcp-streamablehttp-proxy": "^1.3.0"
+    "@perplexity-ai/mcp-server": "^0.2.0",
+    "mcp-proxy": "^5.5.6"
   }
 }
