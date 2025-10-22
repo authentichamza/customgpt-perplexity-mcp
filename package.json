@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "mcp-proxy --host 0.0.0.0 --port ${PORT:-3000} -- npx -y @perplexity-ai/mcp-server start",
+    "start": "mcp-proxy --debug --host 0.0.0.0 --port $PORT --shell -- \"npx -y @perplexity-ai/mcp-server start\"",
     "dev": "PORT=3000 npm start"
   },
   "engines": {
