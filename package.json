@@ -1,15 +1,17 @@
 {
-  "name": "mcp-perplexity-remote",
+  "name": "perplexity-mcp-remote",
   "version": "1.0.0",
+  "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "npx mcp-proxy --host 0.0.0.0 --port $PORT npx -y server-perplexity-ask"
+    "start": "mcp-proxy --host 0.0.0.0 --port ${PORT:-3000} -- npx -y @perplexity-ai/mcp-server",
+    "dev": "PORT=3000 npm start"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "latest",
     "mcp-proxy": "5.9.0"
   }
 }
